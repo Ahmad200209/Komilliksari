@@ -11,7 +11,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 
 async def salomlashuv(context: ContextTypes.DEFAULT_TYPE) -> None:
-    rasmlar = os.listdir("D:\\Projects\\Python\\Komilliksari\\rasmlar")
+    rasmlar = os.listdir("rasmlar\\")
     hijri_months = [
         "Muharram", "Safar", "Rabi'ul-avval", "Rabi'ul-akhir",
         "Jumada al-awwal", "Jumada al-akhir", "Rajab", "Sha'ban",
@@ -54,7 +54,7 @@ async def salomlashuv(context: ContextTypes.DEFAULT_TYPE) -> None:
     # `context.job.data` orqali sanoqni boshqaramiz
     sanoq = context.job.data.get('sanoq', 0)
 
-    with open(f'D:\\Projects\\Python\\Komilliksari\\rasmlar\\ram{sanoq}.png', 'rb') as rasm:
+    with open(f'rasmlar\\\\ram{sanoq}.png', 'rb') as rasm:
         await context.bot.send_photo(chat_id="@zx_lives", photo=rasm, caption=salomlash)
 
     # Rasmlar sonini tekshirish va sanoqni yangilash
