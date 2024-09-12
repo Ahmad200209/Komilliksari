@@ -85,7 +85,7 @@ async def rasm_tutuvchi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
 app = ApplicationBuilder().token("7424736107:AAFdMjo0IR8hY9Nk-WIX5gko-dp9KNMsYMw").build()
 tashkent_tz = pytz.timezone('Asia/Tashkent')
-target_time1 = tashkent_tz.localize(datetime.combine(datetime.today(), time(hour=5, minute=00)))
+target_time1 = tashkent_tz.localize(datetime.combine(datetime.today(), time(hour=6, minute=5)))
 jon = app.job_queue
 jon.run_daily(salomlashuv, target_time1)
 
